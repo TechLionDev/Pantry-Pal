@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.example.app',
-  appName: 'mobile-app-template',
+  appId: 'dev.techlion.pantrypal.app',
+  appName: 'Pantry Pal',
   webDir: 'out'
 };
 
