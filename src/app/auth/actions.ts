@@ -33,7 +33,7 @@ export const authUser = async (formState: FormState, formData: FormData) => {
       message: "Logged In User!",
       type: "success"
     };
-  } catch (error) {
+  } catch (error:any) {
     // get all keys of error.data and join them with a comma
     let messageKeys = Object.keys(error.data.data).join(", ");
     //  for each key, get its message attr and join them with a comma
@@ -109,7 +109,7 @@ export const createUser = async (formState: FormState, formData: FormData) => {
       message: "User Created!",
       type: "success"
     };
-  } catch (error) {
+  } catch (error:any) {
     // get all keys of error.data and join them with a comma
     let messageKeys = Object.keys(error.data.data).join(", ");
     //  for each key, get its message attr and join them with a comma
