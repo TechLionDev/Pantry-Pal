@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 import { getAuthedUser, isAuthed } from "./auth/actions";
 import PocketBase from "pocketbase";
 import { useRouter } from "next/navigation";
+import { ModeToggle } from "@/components/mode-toggle";
 const pb = new PocketBase("https://pantry-pal.pockethost.io");
 pb.autoCancellation(false);
 
 function HomePage() {
   const [authed, setAuthed] = useState(false);
-  const [authCookie, setAuthCookie] = useState();
+  const [authCookie, setAuthCookie] = useState<any>();
   const router = useRouter();
   useEffect(() => {
     (async () => {
@@ -29,10 +30,12 @@ function HomePage() {
   }
   return (
     <>
-      <div className='flex w-dvh h-dvh items-center justify-center p-8'>
+      <div className='flex items-center justify-center p-8'>
         <div className='flex flex-col items-center'>
-          <h1 className='text-4xl font-bold'>Welcome to Pantry Pal</h1>
-          <h2 className='text-2xl font-semibold'>Your personal pantry assistant</h2>
+          <h1 className='text-3xl font-bold'>Welcome to Pantry Pal</h1>
+          <h2 className='text-xl'>
+            Your personal pantry assistant
+          </h2>
         </div>
       </div>
     </>
